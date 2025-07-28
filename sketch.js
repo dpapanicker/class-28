@@ -111,10 +111,7 @@ function draw() {
 
   cannon.display();
 
-  fill("#6d4c41");
-  textSize(40);
-  text(`Score:${score}`, width - 200, 50);
-  textAlign(CENTER, CENTER);
+  
 }
 
 function collisionWithBoat(index) {
@@ -192,8 +189,7 @@ function showBoats() {
           pirateLaughSound.play();
           isLaughing = true;
         }
-        isGameOver = true;
-        gameOver();
+       
       }
     }
   } else {
@@ -209,20 +205,5 @@ function keyReleased() {
   }
 }
 
-function gameOver() {
-  swal(
-    {
-      title: `Game Over!!!`,
-      text: "Thanks for playing!!",
-      imageUrl:
-        "https://raw.githubusercontent.com/whitehatjr/PiratesInvasion/main/assets/boat.png",
-      imageSize: "150x150",
-      confirmButtonText: "Play Again",
-    },
-    function (isConfirm) {
-      if (isConfirm) {
-        location.reload();
-      }
-    }
-  );
+
 }
